@@ -67,7 +67,7 @@ public class TeAm4 extends SortCompetition
 				// after the swap we move on to the next position
 				i++;
 			}
-
+ 
 			else
 			{
 				i++;
