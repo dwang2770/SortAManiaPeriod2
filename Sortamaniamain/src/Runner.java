@@ -11,7 +11,7 @@ public class Runner {
 		long time = end - start;
 		System.out.println("Test1 took: " + time + " nanoseconds");
 	}
-	
+	 
 	public static int [] randArr(int length, int high)
 	{
 		int [] randoArr = new int [length];

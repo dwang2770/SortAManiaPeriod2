@@ -70,7 +70,7 @@ public class TeAm4 extends SortCompetition
  
 			else
 			{
-				i++;
+				i++; 
 			}
 			
 		}
