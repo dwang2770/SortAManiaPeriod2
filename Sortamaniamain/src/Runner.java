@@ -1,15 +1,21 @@
-
+import java.util.Arrays;
 public class Runner {
 
 	public static void main(String[] args) 
 	{
-		 
+		TeAm4 lol = new TeAm4();
+		String [] s = {"l", "s" , "a", "b", "q"};
 		
 		long start = System.nanoTime();
-		TeAm4.bubbleSort(test1);
+		lol.challengeTwo(s,"q");
 		long end = System.nanoTime();
 		long time = end - start;
-		System.out.println("Test1 took: " + time + " nanoseconds");
+		System.out.println("challenge1 took: " + time + " nanoseconds");
+		System.out.println(lol.challengeTwo(s,"q"));
+		for (String x : s)
+		{
+			System.out.print(x);
+		}
 	}
 	 
 	public static int [] randArr(int length, int high)
