@@ -49,11 +49,8 @@ public class TeAm4 extends SortCompetition
 	public int challengeThree(int[] arr)
 	{
 		insertionSort(arr);
-		if (arr.length%2 != 0)
-		{
 			int x = arr.length/2;
 			return arr[x+1];
-		}
 		return (arr[arr.length/2]+ arr[arr.length/2+1])/2;
 	}
 	
