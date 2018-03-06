@@ -48,7 +48,7 @@ public class TeAm4 extends SortCompetition
 	
 	public int challengeThree(int[] arr)
 	{
-		quickSort(arr,0,arr.length);
+		insertionSort(arr);
 		if (arr.length%2 != 0)
 		{
 			int x = arr.length/2;
@@ -197,5 +197,21 @@ public class TeAm4 extends SortCompetition
        //returns i+1 because i is always 1 less than the index due to front -1
         return i+1;
     }
+	
+	public static void insertionSort(int[] list1)
+	{
+		for(int x = 0;  x < list1.length - 1; x++)			//Goes through the array to compare each number to all of the numbers preceding it
+		{
+			for(int y = x + 1; y > 0; y--)					//Will keep swapping a number until it reaches a preceding number smaller than itself
+			{
+				int a = list1[y];
+				int b = list1[y-1];
+				if(a < b)									//If value is less than value preceding it, they will swap
+				{
+					swapInt(list1, y, y-1);
+				}
+			}
+		}
+	}
 	
 }
