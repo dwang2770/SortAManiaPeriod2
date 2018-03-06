@@ -81,7 +81,7 @@ public class TeAm4 extends SortCompetition
 			for(int x = 0;  x < list1.length - 1; x++)		//Goes through the array in order
 			{
 				
-				if(list1[x] > list[x+1])						//Compares two strings to see which one comes first alphabetically
+				if(list1[x] > list1[x+1])						//Compares two strings to see which one comes first alphabetically
 				{
 					swapInt(list1, x, x+1);				
 					swap++;									//Integer swap will increase after a swap
