@@ -1,25 +1,5 @@
-import java.util.Arrays;
-
-public class TeAm4 extends SortCompetition
+public class Team4SortCompetition extends SortCompetition
 {
-	public int compareTo(SortCompetition t)
-	{
-		return (int)(this.totalTime - t.totalTime); 
-	}
-	
-	public void setNumber(int n)
-	{
-		number = n;
-	}
-	public int getNum()
-	{
-		return number;
-	}
-	
-	public void addTime(double avg)
-	{
-		totalTime += avg;
-	}
 	
 	public int challengeOne(int[] arr)
 	{
@@ -66,10 +46,10 @@ public class TeAm4 extends SortCompetition
 
 	public String greeting() 
 	{
-		return "xd";
+		return "This is Team 4. xd";
 	}
 	
-	public static void bubbleSort(int [] list1)
+	private void bubbleSort(int [] list1)
 	{
 		int swap = 1;										//Swap is set to 1 to get the loop started
 		while(swap > 0)
@@ -86,7 +66,7 @@ public class TeAm4 extends SortCompetition
 			}
 		}
 	}
-	public static void StringbubbleSort(String[] list1)
+	private void StringbubbleSort(String[] list1)
 	{
 		int swap = 1;										//Swap is set to 1 to get the loop started
 		while(swap > 0)
@@ -104,19 +84,19 @@ public class TeAm4 extends SortCompetition
 			}
 		}
 	}
-	public static void swapInt(int[] arr, int index1, int index2)
+	private void swapInt(int[] arr, int index1, int index2)
 	{
 		int x = index1;
 		arr[index1] = arr[index2];
 		arr[index2] = x;
 	}
-	public static void swapString(String[] arr, int index1, int index2)
+	private void swapString(String[] arr, int index1, int index2)
 	{
 		String y = arr[index1];
 		arr[index1] = arr[index2];
 		arr[index2] = y;
 	}
-	public static int stringPartition(String[] list, int front, int back)
+	private int stringPartition(String[] list, int front, int back)
     {
         //pivot is the last number
 		String pivot = list[back]; 
@@ -138,7 +118,7 @@ public class TeAm4 extends SortCompetition
  
         return i+1;
     }
-	public static void StringQuickSort(String[] arr, int low, int high)
+	private void StringQuickSort(String[] arr, int low, int high)
 	 {
 	     if (low < high)
 	     {
@@ -150,7 +130,7 @@ public class TeAm4 extends SortCompetition
 	 }
 
 
-	public static void quickSort(int arr[], int low, int high)
+	private void quickSort(int arr[], int low, int high)
 		{
 		    if (low < high)
 		    {
@@ -160,7 +140,7 @@ public class TeAm4 extends SortCompetition
 		        quickSort(arr, pivot+1, high);
 		    }
 		}
-	public static int partitionInt(int [] list, int front, int back)
+	private int partitionInt(int [] list, int front, int back)
     {
         //pivot is the last number
 		int pivot = list[back]; 
@@ -195,7 +175,7 @@ public class TeAm4 extends SortCompetition
         return i+1;
     }
 	
-	public static void insertionSort(int[] list1)
+	private void insertionSort(int[] list1)
 	{
 		for(int x = 0;  x < list1.length - 1; x++)			//Goes through the array to compare each number to all of the numbers preceding it
 		{
