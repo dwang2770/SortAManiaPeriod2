@@ -29,9 +29,8 @@ public class Team4SortCompetition extends SortCompetition
 	public int challengeThree(int[] arr)
 	{
 		insertionSort(arr);
-			int x = arr.length/2;
-			return arr[x+1];
-		return (arr[arr.length/2]+ arr[arr.length/2+1])/2;
+		int x = arr.length/2;
+		return (arr[x]+ arr[x+1]/2);	
 	}
 	
 	public int challengeFour(int[][] arr)
