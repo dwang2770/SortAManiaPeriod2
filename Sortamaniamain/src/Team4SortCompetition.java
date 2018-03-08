@@ -90,6 +90,7 @@ public class Team4SortCompetition extends SortCompetition
 		}
 	}
 	
+	//Bubble sort for comparables for challenge 5
 	private Comparable[] bubbleSortComparable(Comparable [] list1)
 	{
 		int swap = 1;										
@@ -101,7 +102,7 @@ public class Team4SortCompetition extends SortCompetition
 				
 				if(list1[x].equals(list1[x+1]))						
 				{
-					swapIntComp(list1, x, x+1);				
+					swapComp(list1, x, x+1);				
 					swap++;									
 				}
 			}
@@ -109,7 +110,8 @@ public class Team4SortCompetition extends SortCompetition
 		return list1;
 	}
 	
-	private Comparable[] swapIntComp(Comparable[] arr, int index1, int index2)
+	//Swap Comparables helper method
+	private Comparable[] swapComp(Comparable[] arr, int index1, int index2)
 	{
 		Comparable x = arr[index1];
 		arr[index1] = arr[index2];
