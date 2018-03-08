@@ -92,7 +92,6 @@ public class Team4SortCompetition extends SortCompetition
 	
 	private Comparable[] bubbleSortComparable(Comparable [] list1)
 	{
-		Comparable[] sortedArray = new Comparable[list1.length];
 		int swap = 1;										
 		while(swap > 0)
 		{
@@ -107,7 +106,7 @@ public class Team4SortCompetition extends SortCompetition
 				}
 			}
 		}
-		return sortedArray;
+		return list1;
 	}
 	
 	private Comparable[] swapIntComp(Comparable[] arr, int index1, int index2)
@@ -115,7 +114,7 @@ public class Team4SortCompetition extends SortCompetition
 		Comparable x = arr[index1];
 		arr[index1] = arr[index2];
 		arr[index2] = x;
-		return ;
+		return arr;
 	}
 	
 	//Swaping Ints helper method
