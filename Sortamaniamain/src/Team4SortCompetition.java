@@ -38,7 +38,16 @@ public class Team4SortCompetition extends SortCompetition
 	//Challenge Four
 	public int challengeFour(int[][] arr)
 	{
-	
+		int [] sortedVIAMedian = new int [arr.length];
+		
+		for(int i = 0; i < arr.length; i++) 
+		{
+			quickSort(arr[i],0,arr.length-1);
+			sortedVIAMedian [i] = medianCalc(arr[i]);
+		}
+		
+		quickSort(sortedVIAMedian,0,sortedVIAMedian.length-1);
+		return medianCalc(sortedVIAMedian);
 	}
 	
 	//Challenge Five
@@ -95,7 +104,7 @@ public class Team4SortCompetition extends SortCompetition
 	//Swaping Ints helper method
 	private void swapInt(int[] arr, int index1, int index2)
 	{
-		int x = index1;
+		int x = arr[index1];
 		arr[index1] = arr[index2];
 		arr[index2] = x;
 	}
@@ -187,4 +196,16 @@ public class Team4SortCompetition extends SortCompetition
 		}
 	}
 	
+	//Finding the median helper method
+	private static int medianCalc(int [] arr)
+	{
+		int median=0;
+		if(arr.length%2==0)
+		{
+			median = ((arr[(arr.length/2) - 1] + arr[(arr.length/2)])/2) ; 
+		}
+		else
+			median = arr[(arr.length/2)];
+		return median;
+	}
 }
