@@ -90,28 +90,9 @@ public class Team4SortCompetition extends SortCompetition
 		}
 	}
 	
-	//String Bubble Sort Source: Stanley
-	private void StringbubbleSort(String[] list1)
-	{
-		int swap = 1;										
-		while(swap > 0)
-		{
-			swap = 0;										
-			for(int x = 0;  x < list1.length - 1; x++)		
-			{
-				String a = list1[x];
-				String b = list1[x+1];
-				if(a.compareTo(b) > 0)						
-				{
-					swapString(list1, x, x+1);				
-					swap++;									
-				}
-			}
-		}
-	}
-	
 	private Comparable[] bubbleSortComparable(Comparable [] list1)
 	{
+		Comparable[] sortedArray = new Comparable[list1.length];
 		int swap = 1;										
 		while(swap > 0)
 		{
@@ -126,6 +107,7 @@ public class Team4SortCompetition extends SortCompetition
 				}
 			}
 		}
+		return sortedArray;
 	}
 	
 	private Comparable[] swapIntComp(Comparable[] arr, int index1, int index2)
@@ -133,6 +115,7 @@ public class Team4SortCompetition extends SortCompetition
 		Comparable x = arr[index1];
 		arr[index1] = arr[index2];
 		arr[index2] = x;
+		return ;
 	}
 	
 	//Swaping Ints helper method
