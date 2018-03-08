@@ -53,7 +53,15 @@ public class Team4SortCompetition extends SortCompetition
 	//Challenge Five
 	public int challengeFive(Comparable[] arr, Comparable query)
 	{
-		
+		bubbleSortComparable(arr);
+		for(int i = 0; i < arr.length; i++)
+		{
+			if(arr[i].equals(query))
+			{
+				return i;
+			}
+		}
+		return -1;
 	}
 
 	//Our Greeting
@@ -61,6 +69,7 @@ public class Team4SortCompetition extends SortCompetition
 	{
 		return "This is Team 4. xd";
 	}
+	
 	
 	//BubbleSort for ints Source: Stanley
 	private void bubbleSort(int [] list1)
@@ -95,6 +104,24 @@ public class Team4SortCompetition extends SortCompetition
 				if(a.compareTo(b) > 0)						
 				{
 					swapString(list1, x, x+1);				
+					swap++;									
+				}
+			}
+		}
+	}
+	
+	private void bubbleSortComparable(int [] list1)
+	{
+		int swap = 1;										
+		while(swap > 0)
+		{
+			swap = 0;										
+			for(int x = 0;  x < list1.length - 1; x++)		
+			{
+				
+				if(list1[x] > list1[x+1])						
+				{
+					swapInt(list1, x, x+1);				
 					swap++;									
 				}
 			}
@@ -208,4 +235,6 @@ public class Team4SortCompetition extends SortCompetition
 			median = arr[(arr.length/2)];
 		return median;
 	}
+	
+	
 }
