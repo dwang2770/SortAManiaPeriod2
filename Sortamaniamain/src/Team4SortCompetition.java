@@ -110,7 +110,7 @@ public class Team4SortCompetition extends SortCompetition
 		}
 	}
 	
-	private void bubbleSortComparable(int [] list1)
+	private Comparable[] bubbleSortComparable(Comparable [] list1)
 	{
 		int swap = 1;										
 		while(swap > 0)
@@ -119,13 +119,20 @@ public class Team4SortCompetition extends SortCompetition
 			for(int x = 0;  x < list1.length - 1; x++)		
 			{
 				
-				if(list1[x] > list1[x+1])						
+				if(list1[x].equals(list1[x+1]))						
 				{
-					swapInt(list1, x, x+1);				
+					swapIntComp(list1, x, x+1);				
 					swap++;									
 				}
 			}
 		}
+	}
+	
+	private Comparable[] swapIntComp(Comparable[] arr, int index1, int index2)
+	{
+		Comparable x = arr[index1];
+		arr[index1] = arr[index2];
+		arr[index2] = x;
 	}
 	
 	//Swaping Ints helper method
