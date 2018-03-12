@@ -3,14 +3,8 @@ public class Team4SortCompetition extends SortCompetition
 	//Challenge One
 	public int challengeOne(int[] arr)
 	{
-		bubbleSort(arr);
-		if (arr.length%2 != 0)
-		{
-			int x = arr.length/2;
-			return arr[x+1];
-		}
-		
-		return (arr[arr.length/2]+arr[arr.length/2+1])/2;
+		quickSort(arr,0,arr.length-1);
+		return (medianCalc(arr));
 	}
 	
 	//Challenge Two
@@ -31,8 +25,7 @@ public class Team4SortCompetition extends SortCompetition
 	public int challengeThree(int[] arr)
 	{
 		insertionSort(arr);
-		int x = arr.length/2;
-		return (arr[x]+ arr[x+1]/2);	
+		return(medianCalc(arr));
 	}
 	
 	//Challenge Four
